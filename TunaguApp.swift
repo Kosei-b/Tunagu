@@ -8,7 +8,6 @@
 import SwiftUI
 import Firebase
 
-
 @main
 struct TunaguApp: App {
     
@@ -17,18 +16,22 @@ struct TunaguApp: App {
     var body: some Scene {
         WindowGroup {
             
-            let viewModel = AppViewModel()
-            
-           MainContentView()
-                .environmentObject(viewModel)
+            LoginView2()
+//           let viewModel = AppViewModel()
+//
+//           MainContentView()
+//                .environmentObject(viewModel)
+//
         }
     }
 }
+
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
        
         FirebaseApp.configure()
+        
         return true
     }
 }
